@@ -1,0 +1,104 @@
+.appointments__layout {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.appointments__list {
+  display: grid;
+  gap: 16px;
+}
+
+.day-group {
+  padding: 18px 20px;
+}
+
+.appointment-list {
+  display: grid;
+}
+
+.appointment-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.appointment-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.appointment-row__time {
+  min-width: 58px;
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  padding-right: 14px;
+  border-right: 1px solid var(--line);
+}
+
+.appointment-row__body {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 1px;
+}
+
+.appointment-row__body strong {
+  font-size: 14px;
+}
+
+.appointment-row__body small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.appointment-row__doctor {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.appointment-row__meta {
+  display: grid;
+  gap: 6px;
+  justify-items: end;
+}
+
+.appointment-row__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.booking-form {
+  position: sticky;
+  top: 86px;
+}
+
+.booking-form .card__head h2 {
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .appointments__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form {
+    position: static;
+  }
+}
+
+@media (max-width: 620px) {
+  .appointment-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .appointment-row__meta {
+    justify-items: start;
+  }
+}
